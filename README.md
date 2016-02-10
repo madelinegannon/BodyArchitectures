@@ -1,4 +1,4 @@
-##3D Printed Wearables using Processing
+##Crafting 3D Printed Wearables using Processing
 _**Body Architectures Workshop**_
 
 
@@ -134,10 +134,36 @@ For those who have some programming experience, here are some places to modify t
 In the existing code, we are scaling the 2D profile curves based on the distance between the `inner` and `outer` curves at a given point. 
 But this is fairly static. You could modify the scale factor by *any* sort of input; not just distance.
 
-Scaling happens in _alignProfiles()_. 
-
 <img src="https://lh3.googleusercontent.com/LPW0zFwqH-sHUFKWvUBh7YMsN54YX4JvWQkD4uVHqK7cb9FVwPxu0HRjqkZyYUFRSjynCIX9fkVZHwNVlhzGrd2FVGXSEfib6sGDTy3yrrr2JCG0NxOYdH271Vp4aWP3xJF1ebyUlp-ALP-BiAVp_Hbkox0kobCX6635VOepPIk1ulmx6mopdKBE-Cnns4xYA1FK6kyGgzV3uek_NFKLAlhM0-6hhIPRKCUI8ubGUCw_m2zQK6o82TC-4ctHXriOBRTVwQy0Q5fD2maHXTrZNZBuu2qLYdi0LF_331-pXsmIDfiqKdcxTOeNkrGeEeaKGG6W8Gtefm7xcCa064HhDF5ja6NNl0nc0hPoKjQuDP2WnR_xMSIy6c05TkWr8Nrg_q4WX12zef2p23QHt3DeOHo6WBOuohTZvQBZXC-J5RenZLBODCnDG-ZcSTQzMjBmMBcjIItpM0T-sIMWMPH40kXnqcyPAxswiPteuOdUkKi-_NTsKjVMJh8M1syX6JQsrdI2ojgCw8mKvKW9CJ28TpRO2r_XhzVZOTQFFX21WTU9W-lDYQ4bdRxvhbhthJt6FGhp=w1510-h188-no">
 
-######Make it Iteractive
+Scaling happens in `alignProfiles()`. Here are some other ideas for tweaking the scalar value:
+
+1. Add random noise or jitter to make the profiles more jagged.
+2. Use a mathematical function, like `sine` or `cosine`, to add a cyclical undulation the scalar.
+3. Integrate live data, like from sound, webcams, or even [twitter](http://twitter4j.org/en/), to visualize a data set as 3D form.
+
+######Integrate Faster Feedback
+Currently our example reads and writes to text files to connect Processing to Rhino via Grasshopper. Although this is effective, it means we need to manually reload our data every time we update Rhino. But there is a much faster communication technique ... [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control)!
+
+Fortunately, both Processing and Grasshopper have ways to integrate OSC:
+
+1. In Processing, use the [oscP5](http://www.sojamo.de/libraries/oscp5) library.
+2. In Grasshopper, use the [gHowl](http://www.grasshopper3d.com/group/ghowl) plug-in.
+3. Modify `loadPts` to read incoming OSC messages, instead of text files.
+3. Add the `rebuild()` function into `oscEvent()` handler.
+
+With this you'll see that any changes made in Rhino immediately update your Processing sketch.
 
 ######Use Meshes Instead of 2D Profiles
+The alignment method `sweep()` is currently uses 2D profiles to loft 3D geometry, but it also works used fully 3D meshes! For example, this bracelet design reorients 5 closed-solid meshes on the rail curves (instead of 5 2D profile curves). A rail is added on the edges to make sure everything connects:
+
+<img src="https://lh3.googleusercontent.com/S5TS_1RTyjX6tXE2HXrJheajtK76orhXnovoOLkczQf3TMwmwV-uFvyNuAqAZ9DGdLZ2Z-EiLwIWTQ_7nx1Cl5uL6oPyWPIVQvY2lvF3mgBPFPGJNoscXIsq2NQ5Nh_lvKbvjlvNlp821h64soBdg0t2095Jrc-4aaSccFmpkTVlZbqoQmz8Y-OQ3N3AwKvlp1IcX43TowJLHFFJWlEjlkjhAG0PrRrX9EAO8wAd_3rMXs9AGDuWrUdU8PUujXu4KKVyo_UuLVssNNcMmjJ6ttDHFr6jWp3uysq3GTqF6YTag4UIWSbL-YK3_XzUA3CDdIKTSEd6jvATQAWrxLu-bhnapuiPka6hDHVtO9OffCrTXRWNO3f-f2HViISdjriQosXFqifvq9mQJlw6XWlYOEWytXnI7HthbzV6BXikdfbjQ8DdcK7PfY26jgr2yaoMYyxJFH9OwfZlBztYwjRZ-ECPwyecF__90d0g_1NuSiO1YDGgbRpkmL3hovUmbZcGlfnmaCVmEgcmadY4jqvQrgxRmOzbgwLD71qUsoQ_YWSjYCaD8cRfFiCtbCBhS8BPH8Ko=s720-no">
+
+To use meshes instead of profile curves, you'll need to modify how geometry from Rhino/Grasshopper is imported.
+
+1. 3D Model and save 5 mesh modules in the `\geom` folder.
+2. You can import the meshes using an `STLReader` in [toxiclibs](http://toxiclibs.org/docs/core/toxi/geom/mesh/STLReader.html). Save them to a list of type `TriangleMesh`
+3. In `alignProfiles()`, copy and apply the reorientation matrix directly to the original mesh module
+4. Be sure to add all the new meshes to the `models` list.
+
+##Saving & Printing 3D Models
