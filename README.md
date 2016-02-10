@@ -34,7 +34,7 @@ To get started, lets make sure we are all working with the same software version
 
 Open up `BodyArchitectures.3dm`. You should see a 3D scan of an arm with some 3D curves modelled around it. 
 
-<img src="https://lh3.googleusercontent.com/xvGmzecgOMb8I4CX4hZ_jy5A_8iv_-yIb8lYZwGD7c-tV4kKFLMBKHisOaTRKiADmslYinYC8P8_QwFWdq7H7r7WDazj1u45KBBxDaMQ5JV3sEIh2XCi9v-taJKrgXDnduxBDzVg1k6aV8JBFqVwCF8WlaVMx_29uguGAuu2-gigUnN86gSIoQS9qzfBhH_RLxmvXBTrSM6jzwoll39delNAdpAXb4mmENohSQxetA6AaqKsgdgUDFZ1wBcSv_U7cuzvi0QDuU-5yH8M0iO-ti-XKS54AfUc0c4BjqIeLqZrVSk9ruzAhkcGPPzm5X-DHf7-Fkwno2O5vg9XKVCObN_mE8q3DbSjXAOvptgrFI8JCPhA6GWgcgmPJlsby6-OYzNlMeISWkZ6dTEkGmgquhO6qxi15NKEW1KzYokj8glJa6al1KqSuZNZgP4L6VVgPWEn4q6foNZAmwGATV9usOvvpmOMg8qw-iLR6RZBO0naLpfzjxASHNCSaAUWqFka9fUlMb9wUdAWA2qwaC3lauEoc81jtELCO47iBjWKnRE4qIrLoobxNg1Tsg5sRBsr_tXz=w1440-h860-no">
+<img src="https://c2.staticflickr.com/2/1623/24306194624_0e20b3cde2_b.jpg">
 
 The _Layers_ pallette will give you a good idea of what the individual curves do for our bracelet, but basically, the 3D curves are the inner and outer boundary of bracelet. 
 The 5 2D profile curves (located at the origin) are what we are going to use to generate our bracelet form.
@@ -45,7 +45,7 @@ These **3D inner** and **outer rail curves** and **2D profile curves** are what 
 Now open `BodyArchitectures.gh`in Grasshopper. All this Grasshopper script does is convert each rail curve and profile curve into a set of 3D points, the stream those points out as `.txt` files. 
 This means that when you modify any of the assigned curves in Rhino, the text file with all the 3D points will also be modified. 
 
-<img src="https://lh3.googleusercontent.com/dM-RVPpeFXwZ1B1aAo6Tb9owv54NEH__-Q3n6OJbS2f3nUyt73X05efXBcs35i_NjhnueRiqmxqjaE8SCJcnmf0uG0ZiVF7Vp5F8addbpPlHctmwl3dgFP0Cbq0CVDLohOQrcLmw_b6JYweukTqHFHpBdP8kx1b5eXjIp-6JINrJdBpWfjCgUnQtitiZur68uH7URmpCVMLZyAp10CO11_NEotHfcLfE1tXI1dQUy7lY5_MXyKTqUpWTWkYcVszWUF8maUO1CwYgllJhB1M71OIsFd1hZjyFBFBraHrmHkCj0vkeWkZsY161S9zfhgkIejeI-Kfp92QqMduczM9nVt_qTupHnXu4E-CvfZCvrTEr5mvMLemFtxUjdYHg9vne5LdoyLUMgZXEwDF90YUwxv3AJHcmUDQF0WM0M-xuY1cX81XO3joEtfbwBLY-zP1QaC8NV-urJ8Ci5yLoILzWE4FUuXDEKupTS5dSzjgvjI6GIfVc-3UHbToiK_nm5TCBNFQdhsi6ZPoCxel5zKZhroD6q2c0MrBCw4JFJC-XFUdX9qynDrpvQyflueAGE_Bv63A2=w1439-h860-no">
+<img src="https://c2.staticflickr.com/2/1616/24306194684_7ff3069127_b.jpg">
 
 By linking these text files to our Processing sketch, we build a pipeline for doing precise 3D modeling in a CAD program while having all the flexibility and extensibility of code-based form.
 
@@ -53,13 +53,13 @@ But before you can use this pipeline, we need configure `BodyArchitectures.gh` f
 
 * Right-click each of the _Panel_ objects, find `Stream Destination`.
 
-<img src="https://lh3.googleusercontent.com/pwbnapUxTYmEoTbu3ZQbXU5yoKfv74-YBdf252emM4S9h4psP6M5QGVN0jXD6fqwyOo2Jzuqw8zGcu448-K0aKCDoX8CvGl6JdwTS-B1TWLoD7wiqv0xXt0mWoKvuhy-_5irrL-_cY_al5z5Kj2dxFTGVb31oMiyJi2mChCIZFctGa9x3dw05nxrS0SDGhmaFSY3tqf8rwneAPrag5AVuKtvFa3NPwWV45GWRpb3Qz3tRGnK9tzWXAs0Ed2as53sT2yGcgYd6YnY8kd7GHXfsWRRmpb7XERpSs8wwJfhdpvuBzpivbadV0otImcU1n9d-DXo208msnJFzp2tyW-8WCI4kkd_ToYGaofBKYGfr0dem0uli3trNJo2J4bwCtAgL87OSumGClakpaeXkFSpZVjcSLvW09DBccCmLAdpJtbxIWQxeTsOAM5Danhh_o3YJ03Qk7pmj28XqTze9lScIgDpTSI76gm3vrVHT1Rn306R2w3rWuVtseY4cPGAFS6CHcSlmRyZGIoalI0Wcdx8VB7NOl21_E2ERdCFDybFNMAcMVxGxWZRfvb3pY3UWraX3ptn=w2452-h1488-no">
+<img src="https://c2.staticflickr.com/2/1441/24306194604_196db9262c_b.jpg">
 
 * After selecting `Stream Destination`, navigate to the `\data\geom` folder where you downloaded this project.
 
-<img src="https://lh3.googleusercontent.com/Stl_SYAqc6Wox9h0vdO9m24O1GE3ilnKTmg58AFbJcaXR4wkArvhW8CA0305h1nCQHXNZmst_AisUCV77CcOMUwvBWvIQT_pKYZkWet5yzkVZzSfwZ0UDullTrS8loMPozEPr2aav3PimY0gk6jSxtpcFklpfwjVFk_r1kt4xWa9UrfC9ZYD9EgdfFSwTJDM92T4Sjnxgoqoua__Qkx16ZKB8AlyaiQ9ORAOdKtMi9WlXfmUQGsJH3IqJb7gy0iOx4yUMSIiigjGrUvzcE1acHxA5tkvOpBY_2ZEC3-JIHQFiSgNP30UprHp3CFi3R17vVGoOSsPr5CjXMrQIvbByCQb1F-bQHYAm444-4YiIH9tV4schm6EeRyVq_gsCYrLmNMwKVdtIYmPMSvrseqxfbQBtw75PEISUr9BETVdbvVzHX8yOIog6It972fod3Y4msg-0gwtOdk9oy_MoJo0I2Np3kM6ZNidyUug8pYBCnRulRgnaoC03HebJb7sfsXYMcd8lJbLJsIchjdnnQ08w_tn9KF9fGZaPWjQcNTwJ-4GmPMDWXBnx_eL-2FdQ6qOcjwg=w2452-h1488-no">
+<img src="https://c2.staticflickr.com/2/1444/24936783105_1f2919fb17_b.jpg">
 
-* Hit `enter` tooverride the existing file.
+* Hit `enter` to override the existing file.
 
 ####Processing
 Open `BodyArchitectures.pde` in Processing 3.0. Before we run our code, you'll need to add the _PeasyCam_ and _Toxiclibs_ libraries to your `Contributed Libraries` folder. 
@@ -70,7 +70,7 @@ Open `BodyArchitectures.pde` in Processing 3.0. Before we run our code, you'll n
 
 With the libraries added, you should be able to run the sketch:
 
-<img src="https://lh3.googleusercontent.com/1kkoAPjcigqI705cSNXB1yafOAWinrcqbbM1EhHKSR0JALTnQ6nJM9vENHjI-Y1GAc6U3g5zGG9dEomG0GCNQ8sWX7dnFR3PDYqCcQVZO5EZGka67U-8XUOghNCcKwOBDK027wjoFj2sMoBlo5xvJdDrwX-pFFbHdUaukW6JGh2WIOPA1EVmu78UqfCzNYCurzFYYcSpf1HHF6fapCv-4Q11eZSHCXAnjpluPZ7EbzCHDQ7ilvXP2BOebQEbscqLVC_bzYfI6mySRaoQ_1mpZrJmHD72BjCZX3QXWkVq2gJnkbiMjXY-JrHgAkRaKcMiiUrhdGULWiW3JJMaLR6DIa2OycKUz6B9k95-2O1habq4T0MtPF0eMc6Hw6pC7716XvAMOqEN-bdGWHlJ8Y2b2Xt1DtAYEPmFGxh9_lpG1L6yauSO7gS0tuOM3xKHV4E__ELhDDk0lv7fjeuSy4wWjfOgK-oz4s2BywtLaTMEqqnCoNcOz6VHCR87FTguN06JEfCRErY5yj9QFIEM4LALa5k2xRT5AU6JJzwYGJ4gzzcrGvagasJUNWaqLds8ZHoR2Nrl=w2114-h1514-no">
+<img src="https://c2.staticflickr.com/2/1551/24936783035_c3e8e3f07b_z.jpg">
 
 
 ##Code Structure
@@ -106,17 +106,18 @@ Now that we have our Rhino file linked to our Processing sketch via Grasshopper,
 
 You should see that your bracelet is far wider than previously. _If not, make sure that your .txt files in grasshopper are pointing to the_ `\data\geom` _folder and are streaming properly_:
 
-<img src="https://lh3.googleusercontent.com/AqgRSMc9Vwr60Afv9NNf64PdKBNWtIIg7khsw0QRRTHi0L1BajLK3EGcr826v4XpM8EZwOc8vN6i7z6SK5MNWcQv7V97kNz1GeIT6ooSOFNlO9VepicDrBYqdKHAmAC9SaD3PFd8BBmqUbfVWJvo_7_KJi8JqoAcvqAQH1sqM3MVO6m6pY8lz_fhAPFRtEanvqZZRbuAp--gcex5gxc_29yIZgSqf3kY3htgxdxsN4tdIFUlklq_JdflKAdI319cX7kZpjaGbdZmt8dnUWH0f9J-RINDav5CuTh_ckXOZl2NSh-W-UuGZSjx2qIHzDu2BUfYs6UZRTSTUtvtucvwsKOzXVaMkkzSChxmlrj6JNnn18RoDdsbp_w_8gPbExJtfnP0DEiKlPm0nHw4PS60FmB00Nq4bTjPNaqaEybDXhr18TUQbwbjjV0Ua8EkS3s7gKN62Vssr8VocYj9C9O6JkMhrQSlVVnZ2PBPHHjSdZdPnwB8_juOXFNATVXf9z2ouVzzoZwQuys-cLBpWgztkDQ6xSx4LeepAqWjPOd_80DUuSd1pZhro-ttae3Wehm8Y8Ac=w2452-h1510-no">
-<img src="https://lh3.googleusercontent.com/1kkoAPjcigqI705cSNXB1yafOAWinrcqbbM1EhHKSR0JALTnQ6nJM9vENHjI-Y1GAc6U3g5zGG9dEomG0GCNQ8sWX7dnFR3PDYqCcQVZO5EZGka67U-8XUOghNCcKwOBDK027wjoFj2sMoBlo5xvJdDrwX-pFFbHdUaukW6JGh2WIOPA1EVmu78UqfCzNYCurzFYYcSpf1HHF6fapCv-4Q11eZSHCXAnjpluPZ7EbzCHDQ7ilvXP2BOebQEbscqLVC_bzYfI6mySRaoQ_1mpZrJmHD72BjCZX3QXWkVq2gJnkbiMjXY-JrHgAkRaKcMiiUrhdGULWiW3JJMaLR6DIa2OycKUz6B9k95-2O1habq4T0MtPF0eMc6Hw6pC7716XvAMOqEN-bdGWHlJ8Y2b2Xt1DtAYEPmFGxh9_lpG1L6yauSO7gS0tuOM3xKHV4E__ELhDDk0lv7fjeuSy4wWjfOgK-oz4s2BywtLaTMEqqnCoNcOz6VHCR87FTguN06JEfCRErY5yj9QFIEM4LALa5k2xRT5AU6JJzwYGJ4gzzcrGvagasJUNWaqLds8ZHoR2Nrl=w2114-h1514-no" width=420>
-<img src="https://lh3.googleusercontent.com/FHUDfqB4VF9wkHw_w14ksuw_ZnzLq-cg-VrFJBVvgVXgDJQGnWDK6IFuOE9MTeF_0UxoAxmALla9ye64CbukDCI1DnuDk1WOr5i-P_m_G_ErVwZuDt88UJCROW-DFa-XLSJ_rAAAZkUwGXHOTbDG9PGOM7reiujGUWpAoEgA-w4Xix6aftn5nzbEkUq6S8rzFBOtUQ3vT3ncT5n9dgNClulahPT_6IwQ6aDaLLtahcVkZDH9906CJs08aPPlCu0QepwrtfCogLF733bK8o94xueLGal7uZghXHvNRgU0FU_I8nQWVynD_xm9fOml6hKVRz4yW_lCAhnwN_v136Rpkxa1C4lUPp7rgcPsuhsyXNzRa4f-7d7wXx51fSnozRQLn39j2dv_X7972FAC7xM4LJBLUKq_60u13z_wdoY8ppRneTlKaq7W6ryxv0nUohBhQiqE9-ByrN2eevNtNWgHiBC2OLg4ZmzAQZWI4plISVo0iYDGNYXcAW6zmHDNxoX5-nT8AB8YdCA_NFCCjwhkjIcSoxsODPMiRPL6nZ6d5r_m56Sxk1U-YMenuzfFCmMWCJYV=w2114-h1514-no" width=420>
+<img src="https://c2.staticflickr.com/2/1710/24936783015_2404492d59_b.jpg">
+<img src="https://c2.staticflickr.com/2/1551/24936783035_c3e8e3f07b_z.jpg">
+<img src="https://c2.staticflickr.com/2/1593/24641306760_ba4fb01482_z.jpg>
 
 You can also change the shape of the outer curves:
 
 1. Turn on the control points for one outer curve.
 2. Select and move individual points.
 
-<img src="https://lh3.googleusercontent.com/dS6nTTWGS67nczR2R8nEceZsR6nANldAGx0ufiRQjRh7H6AAqtd_XZDlNRTwRR3lBMycAA45tn8e1rqXyRjE3oPC09dcI0Vp4xLmIO76mRX37MKBUtb0YJd7EDPjoQP_sxvE1B1_BUzdJ8PSSf8eJgOTVm0MaJ1YR89XTZ1U3L9VD-6fwTw34LY_VW28X4Vh4SpM4W4CmZdF7H8wq-cWAAzU8zRncFFY0ILWIzgkPEEyX-zLt1d3hPPNTQMRerPJxbWf47GPMxCtY-UAmyNE39eDlQWgzulmQRBN3cetXLuqJDxEg0JJismQdiHDdAnaRObWLI423-f_iiE5hPv-QT_kTwM8RsBINkruky1pQqV4y0o1A1P-eDl-W59oE3HxQEe3srLyaXB3omLr4AS6pg7JozhFE2GIGjsQiOScrNZjHddCMwLBcMdbWbm_75QtoDhYviocWPyA7KAwgyTJkcyA79P0H6ebv8bPF4TyKPeIio5g5vYZekJDC1uO5pgmGwnYGj6xn8ZjTK648bv04mC0ht19FdNw1UUTSp3c9SGRIScl8OkE6fUyNZiAZr8q2Q7A=w1440-h868-no">
-<img src="https://lh3.googleusercontent.com/yWF4ukNpmmuhcpviFtCtiRC1YQ-rYfeaYfGq4CTWZJ9jPnkx6c327Plj43VVAZebhUxp_2bmSIhiNsJybUaZVbz-puz5Xhm0jJIgUYZcctIg9QXJ58NYM5WB2aQ4TjghNdrUaEhFIitL-P1jusPHRTMRgJBv_bgsrVGGZ-HcgD37ZyZwMAyD-csNfs7k-IMFnSw_FlVLG-AkPw8hncAUst_7IW9-tYbuEG9SaQvXbpTCyT5fauojNFtfK7R3hs5TQaK5m3xRihLOgu85uuLV7M7oDAHl7xvn6DzI_dUMuUt6Sm_q8AXSBaiJF_EXCO9gckYWsunIPz1Lx9a58F1KUggjufZlJLDxZi5t5lLn1czYgbO0g5KwvxSfZd6Iqj__s4Jqg8Ap85Yh2uXI-MxwNvJE-9Ip8Nb-yoZ8y99bytfJEA1vXTfx8Ge62JEqoVFn4ws8OtMYaQ8PcPPzUSVicf3j0wn6ZjU0KGD5eAPFkWK50Y79kLVQolsVL9Vhr8tkmRKUpfAW3H3c7Ls99BVWra2meL8veiKmRogH_OgzwrLw1qnb8Vj-BilDMGt6ibviSRz9=w2114-h1514-no">
+<img src="https://c2.staticflickr.com/2/1695/24309942803_d122ca7a30_b.jpg">
+<img src="https://c2.staticflickr.com/2/1551/24569161089_8b9deea317_z.jpg">
+
 Lastly, you can also modify the overall design by changing the 2D profile curves:
 
 1. Turn off the `arm mesh` layer in Rhino
@@ -125,7 +126,7 @@ Lastly, you can also modify the overall design by changing the 2D profile curves
 
 With this method, you're getting an entirely new bracelet design with just a few quick modifications in Rhino. Here's an example using ovoid 2D profile curves with one set of inner/outer rail curves rotated:
 
-<img src="https://lh3.googleusercontent.com/lBNEp6q7AAaHemiJjLkbVomn4U66jGOS5kKAcyqtmBDrNZEDCDghVq6T9kL2v7ZqvVeQBZyM6Sh1KLZa90e2RKU6IPul6qAo5NO3tlhaWVqOWqtjwVfK_73qwfsbwadv-SRbla2bwFKfPpcoADjWfK1-oZlHbf-bA-YyJQcHmteEXNJ2KHdZ2wDymD2Qtuwso6A3nRbdmS6UyyjhDy8f5lL_tv3cExICdZH42pe8S3AIiKrEv2olUPIrx-1s4Qq37ZIcapaDIig_vMcPgAP0UbpjbpQV5psLbhMU800ZTLjB04rww07d6LpuwRoSZAIk9S771-EqG8M2QLlgF7WsnRArltkpYXfvaz1q6goSiXuhPuVsvq1M9TTgaWstfOVcNbn54-GopS_fkz8P6UxgcHvyqZUECi82eSmQWenadIlvVqDzrQHkn1XOFoD-1xaFq4C2uErNZ70gUIiVdu8Ik0LbINtdF3KxaZSs4jdaOUVbbK3dwETXFKPLXb7QsbFFOPVAuuaw_4j-9NZkJMTPJBIYf72RIwkDHc71RiHpxnvgoFNs7XhzOasx30Gi2IowI-Iv=w2114-h1514-no">
+<img src="https://c2.staticflickr.com/2/1710/24936782915_1300f43306_z.jpg">
 
 ####For Advanced Users
 For those who have some programming experience, here are some places to modify the code so you can customize your bracelet design even more.
@@ -134,7 +135,7 @@ For those who have some programming experience, here are some places to modify t
 In the existing code, we are scaling the 2D profile curves based on the distance between the `inner` and `outer` curves at a given point. 
 But this is fairly static. You could modify the scale factor by *any* sort of input; not just distance.
 
-<img src="https://lh3.googleusercontent.com/LPW0zFwqH-sHUFKWvUBh7YMsN54YX4JvWQkD4uVHqK7cb9FVwPxu0HRjqkZyYUFRSjynCIX9fkVZHwNVlhzGrd2FVGXSEfib6sGDTy3yrrr2JCG0NxOYdH271Vp4aWP3xJF1ebyUlp-ALP-BiAVp_Hbkox0kobCX6635VOepPIk1ulmx6mopdKBE-Cnns4xYA1FK6kyGgzV3uek_NFKLAlhM0-6hhIPRKCUI8ubGUCw_m2zQK6o82TC-4ctHXriOBRTVwQy0Q5fD2maHXTrZNZBuu2qLYdi0LF_331-pXsmIDfiqKdcxTOeNkrGeEeaKGG6W8Gtefm7xcCa064HhDF5ja6NNl0nc0hPoKjQuDP2WnR_xMSIy6c05TkWr8Nrg_q4WX12zef2p23QHt3DeOHo6WBOuohTZvQBZXC-J5RenZLBODCnDG-ZcSTQzMjBmMBcjIItpM0T-sIMWMPH40kXnqcyPAxswiPteuOdUkKi-_NTsKjVMJh8M1syX6JQsrdI2ojgCw8mKvKW9CJ28TpRO2r_XhzVZOTQFFX21WTU9W-lDYQ4bdRxvhbhthJt6FGhp=w1510-h188-no">
+<img src="https://c2.staticflickr.com/2/1499/24569160889_2460f3bf64_z.jpg">
 
 Scaling happens in `alignProfiles()`. Here are some other ideas for tweaking the scalar value:
 
