@@ -117,15 +117,11 @@ public void keyPressed() {
     saveModel = true;
 
   // re- import & build the geometry
-  if (key == 'b' || key == 'B') {
-    models.clear();
-    profiles.clear();
-
-    loadGHdata();
-    createEnvelopeCrvs();
-    buildMesh();
-  }
+  if (key == 'b' || key == 'B') 
+    rebuild();
 }
+
+
 
 ////////////////////////////////////////////////
 ////////////// SAVING GEOMETRY /////////////////
@@ -196,6 +192,20 @@ private void buildMesh() {
     models.add(capEnds(first, false));
     models.add(capEnds(last, true));
   }
+}
+
+/**
+ * Reloads all geometry data and rebuild the mesh.
+ *
+ * Call from listener event, like keyPressed()
+ */
+private void rebuild() {
+  models.clear();
+  profiles.clear();
+
+  loadGHdata();
+  createEnvelopeCrvs();
+  buildMesh();
 }
 
 
@@ -309,6 +319,8 @@ private ArrayList<ArrayList<Vec3D>> alignProfiles(ArrayList<Vec3D> inner, ArrayL
 
     Quaternion alignment=orientations.get(i);
 
+    // currently scaling based on distance between inner and outer curves,
+    // but you could get creative here to tweak the scale factor!
     float scalar = map(inner.get(i).distanceTo(outer.get(i)), minDist, maxDist, 1, 4);
 
     // construct a matrix to move shape to current curve position
