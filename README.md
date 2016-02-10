@@ -11,9 +11,9 @@ Some experience with Processing and 3D modeling is presumed. The code here will 
 
 ####What You'll Learn
 Included in the workshop files are code examples for:
-  * Connecting geometry from Rhino/Grasshopper to  Processing
-  * Setting up a 3D modeling environment
-  * Building valid, printable meshes 
+  * Connecting geometry from Rhino/Grasshopper to Processing
+  * Setting up a 3D modeling environment in Processing
+  * Building valid, 3D printable meshes in Processing
   * Visualizing 3D geometry
   * Exporting .stl's and png's
   
@@ -130,7 +130,7 @@ With this method, you're getting an entirely new bracelet design with just a few
 ####For Advanced Users
 For those who have some programming experience, here are some places to modify the code so you can customize your bracelet design even more.
 
-######Dynamically Scale the 2D Profiles
+#####Dynamically Scale the 2D Profiles
 In the existing code, we are scaling the 2D profile curves based on the distance between the `inner` and `outer` curves at a given point. 
 But this is fairly static. You could modify the scale factor by *any* sort of input; not just distance.
 
@@ -142,7 +142,7 @@ Scaling happens in `alignProfiles()`. Here are some other ideas for tweaking the
 2. Use a mathematical function, like `sine` or `cosine`, to add a cyclical undulation the scalar.
 3. Integrate live data, like from sound, webcams, or even [twitter](http://twitter4j.org/en/), to visualize a data set as 3D form.
 
-######Integrate Faster Feedback
+#####Integrate Faster Feedback
 Currently our example reads and writes to text files to connect Processing to Rhino via Grasshopper. Although this is effective, it means we need to manually reload our data every time we update Rhino. But there is a much faster communication technique ... [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control)!
 
 Fortunately, both Processing and Grasshopper have ways to integrate OSC:
@@ -154,7 +154,7 @@ Fortunately, both Processing and Grasshopper have ways to integrate OSC:
 
 With this you'll see that any changes made in Rhino immediately update your Processing sketch.
 
-######Use Meshes Instead of 2D Profiles
+#####Use Meshes Instead of 2D Profiles
 The alignment method `sweep()` is currently uses 2D profiles to loft 3D geometry, but it also works used fully 3D meshes! For example, this bracelet design reorients 5 closed-solid meshes on the rail curves (instead of 5 2D profile curves). A rail is added on the edges to make sure everything connects:
 
 <img src="https://lh3.googleusercontent.com/S5TS_1RTyjX6tXE2HXrJheajtK76orhXnovoOLkczQf3TMwmwV-uFvyNuAqAZ9DGdLZ2Z-EiLwIWTQ_7nx1Cl5uL6oPyWPIVQvY2lvF3mgBPFPGJNoscXIsq2NQ5Nh_lvKbvjlvNlp821h64soBdg0t2095Jrc-4aaSccFmpkTVlZbqoQmz8Y-OQ3N3AwKvlp1IcX43TowJLHFFJWlEjlkjhAG0PrRrX9EAO8wAd_3rMXs9AGDuWrUdU8PUujXu4KKVyo_UuLVssNNcMmjJ6ttDHFr6jWp3uysq3GTqF6YTag4UIWSbL-YK3_XzUA3CDdIKTSEd6jvATQAWrxLu-bhnapuiPka6hDHVtO9OffCrTXRWNO3f-f2HViISdjriQosXFqifvq9mQJlw6XWlYOEWytXnI7HthbzV6BXikdfbjQ8DdcK7PfY26jgr2yaoMYyxJFH9OwfZlBztYwjRZ-ECPwyecF__90d0g_1NuSiO1YDGgbRpkmL3hovUmbZcGlfnmaCVmEgcmadY4jqvQrgxRmOzbgwLD71qUsoQ_YWSjYCaD8cRfFiCtbCBhS8BPH8Ko=s720-no">
@@ -171,7 +171,7 @@ When you've got a bracelt design that you like, you and press 'S' to save out th
 
 1. You can change the name of your files saving out in the `saveModels()` function.
 
-######3D Printing
+#####3D Printing
 Although the bracelet geometry is challenging for desktop FDM printers (there are lots of overhangs that require support structures), I've had fairly good success printing variations on Ultimakers and Makerbots. However you'll need to do a little bit of _post-processing_ to increase your chances of a successful print:
 
 1. Download [Meshmixer](http://www.meshmixer.com/download.html)
@@ -180,11 +180,18 @@ Although the bracelet geometry is challenging for desktop FDM printers (there ar
 4. Use this new file for whatever slicer you're using (e.g., Makerbot Desktop or Cura)
 5. Make sure you print with a raft, there's no need to generate additional supports
  
-The Meshmixer supports are quite minimal, reducing the printing time (as well as the support removal time!):
-<img src="http://www.meshmixer.com/images/mainpage_download.png">
+The Meshmixer supports use a branching structure that are quite minimal. This significantly reduces printing and clean up time!
 
-##Physical Prints
-Here are a few examples that were generated using these techniques and printed using SLS printers:
+##  
 
-<img src="https://lh3.googleusercontent.com/5qbVfU77yP434ZPfzEd_4uuDqsUw9fWKjKulhZMOnil2a-f9YsF_mx6_y6hj0fXvAmAp3mX66B-NAsnQ_TYyBLgIARrs-uEqeaB6ukuhrZONg9TcgHeo_3BzjN9fkHJZ3HHzsZTroX-obGUCG2CrCLg8PgVAL1CYox7C49HCrAJyP5a9seULPiZIn_OCs9m4MD55OgSb-LbTY5uQkkMC4dufFQDSucxkxVGN7ueUAPBilMQJUWaPHy0FO3kUeGKzg1liuSXKbMDIRswvzLzGrslhdSWamijXPZIl_NNEkD9adrzwQnhZXB3b2WTsBM8PlDbRTtekVATEKZHKnoYIY8YUSKSjI-5xXQZmPNENik-feX2yWXyy0WGxIUxR7a6ziwfUceGaRo7Wb1spgIFLRFLznBgrKn_0MJ-CsvEfiH5MMLKSSudvnOQXUEe5o3MWhYJbxdK4pcqwhyV5Qp7lHXBNsxEdU5q907zmXrLPFDV7FupQeI2GdtzUDR5zghjBXWTe-gn26g0-2pjdlg10wmDvgmT_ZBJDZu7NqV0sWK3jl-7PElo2qpuVNsi2gjGpFh3P=s1514-no">
+##Summary
+I hope this has given you a good starting point for exploring 3D modeling and printing in Processing. 
+By starting with geometry from Rhino/Grasshopper, we can precisely model components that need high precision (like the sizing and opening of the bracelet.) It also allows people without much programming experience can get a taste of how linking geometry to Processing can open many more streams of input for crafting 3D form.
+
+Although we couldn't go into great detail about the code included in this tutorial, there are many additional functions you could be useful for future projects:
+
+1. `initCamera()` and `drawAxes()` setup a 3D camera and draws the world axes
+2. `drawCrvs()` draws a list of points
+2. `mesh()` quad strips two lists of points
+3. `interpolateCrvs()` makes any number of linearly interpolated curves between two edge curves
 
