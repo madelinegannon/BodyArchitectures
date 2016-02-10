@@ -186,7 +186,7 @@ The Meshmixer supports use a branching structure that are quite minimal. This si
 
 ##Summary
 I hope this has given you a good starting point for exploring 3D modeling and printing in Processing. 
-By starting with geometry from Rhino/Grasshopper, we can precisely model components that need high precision (like the sizing and opening of the bracelet.) It also allows people without much programming experience can get a taste of how linking geometry to Processing can open many more streams of input for crafting 3D form.
+By starting with geometry from Rhino/Grasshopper, we can precisely model components that need high precision (_like the sizing or the opening of a bracelet_). It also allows people without much programming experience can get a taste of how linking geometry to Processing can open many more streams of input for crafting 3D form.
 
 Although we couldn't go into great detail about the code included in this tutorial, there are many additional functions you could be useful for future projects:
 
