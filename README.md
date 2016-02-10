@@ -107,8 +107,8 @@ Now that we have our Rhino file linked to our Processing sketch via Grasshopper,
 You should see that your bracelet is far wider than previously. _If not, make sure that your .txt files in grasshopper are pointing to the_ `\data\geom` _folder and are streaming properly_:
 
 <img src="https://c2.staticflickr.com/2/1710/24936783015_2404492d59_b.jpg">
-<img src="https://c2.staticflickr.com/2/1551/24936783035_c3e8e3f07b_z.jpg">
-<img src="https://c2.staticflickr.com/2/1593/24641306760_ba4fb01482_z.jpg>
+<img src="https://c2.staticflickr.com/2/1551/24936783035_c3e8e3f07b_n.jpg">
+<img src="https://c2.staticflickr.com/2/1593/24641306760_ba4fb01482_n.jpg">
 
 You can also change the shape of the outer curves:
 
