@@ -182,3 +182,9 @@ Although the bracelet geometry is challenging for desktop FDM printers (there ar
  
 The Meshmixer supports are quite minimal, reducing the printing time (as well as the support removal time!):
 <img src="http://www.meshmixer.com/images/mainpage_download.png">
+
+##Physical Prints
+Here are a few examples that were generated using these techniques and printed using SLS printers:
+
+<img src="https://lh3.googleusercontent.com/5qbVfU77yP434ZPfzEd_4uuDqsUw9fWKjKulhZMOnil2a-f9YsF_mx6_y6hj0fXvAmAp3mX66B-NAsnQ_TYyBLgIARrs-uEqeaB6ukuhrZONg9TcgHeo_3BzjN9fkHJZ3HHzsZTroX-obGUCG2CrCLg8PgVAL1CYox7C49HCrAJyP5a9seULPiZIn_OCs9m4MD55OgSb-LbTY5uQkkMC4dufFQDSucxkxVGN7ueUAPBilMQJUWaPHy0FO3kUeGKzg1liuSXKbMDIRswvzLzGrslhdSWamijXPZIl_NNEkD9adrzwQnhZXB3b2WTsBM8PlDbRTtekVATEKZHKnoYIY8YUSKSjI-5xXQZmPNENik-feX2yWXyy0WGxIUxR7a6ziwfUceGaRo7Wb1spgIFLRFLznBgrKn_0MJ-CsvEfiH5MMLKSSudvnOQXUEe5o3MWhYJbxdK4pcqwhyV5Qp7lHXBNsxEdU5q907zmXrLPFDV7FupQeI2GdtzUDR5zghjBXWTe-gn26g0-2pjdlg10wmDvgmT_ZBJDZu7NqV0sWK3jl-7PElo2qpuVNsi2gjGpFh3P=s1514-no">
+
