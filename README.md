@@ -55,7 +55,7 @@ But before you can use this pipeline, we need configure `BodyArchitectures.gh` f
 
 <img src="https://lh3.googleusercontent.com/pwbnapUxTYmEoTbu3ZQbXU5yoKfv74-YBdf252emM4S9h4psP6M5QGVN0jXD6fqwyOo2Jzuqw8zGcu448-K0aKCDoX8CvGl6JdwTS-B1TWLoD7wiqv0xXt0mWoKvuhy-_5irrL-_cY_al5z5Kj2dxFTGVb31oMiyJi2mChCIZFctGa9x3dw05nxrS0SDGhmaFSY3tqf8rwneAPrag5AVuKtvFa3NPwWV45GWRpb3Qz3tRGnK9tzWXAs0Ed2as53sT2yGcgYd6YnY8kd7GHXfsWRRmpb7XERpSs8wwJfhdpvuBzpivbadV0otImcU1n9d-DXo208msnJFzp2tyW-8WCI4kkd_ToYGaofBKYGfr0dem0uli3trNJo2J4bwCtAgL87OSumGClakpaeXkFSpZVjcSLvW09DBccCmLAdpJtbxIWQxeTsOAM5Danhh_o3YJ03Qk7pmj28XqTze9lScIgDpTSI76gm3vrVHT1Rn306R2w3rWuVtseY4cPGAFS6CHcSlmRyZGIoalI0Wcdx8VB7NOl21_E2ERdCFDybFNMAcMVxGxWZRfvb3pY3UWraX3ptn=w2452-h1488-no">
 
-* After selecting `Stream Destination`, navigate to the `/geom` folder where you downloaded this project.
+* After selecting `Stream Destination`, navigate to the `\data\geom` folder where you downloaded this project.
 
 <img src="https://lh3.googleusercontent.com/Stl_SYAqc6Wox9h0vdO9m24O1GE3ilnKTmg58AFbJcaXR4wkArvhW8CA0305h1nCQHXNZmst_AisUCV77CcOMUwvBWvIQT_pKYZkWet5yzkVZzSfwZ0UDullTrS8loMPozEPr2aav3PimY0gk6jSxtpcFklpfwjVFk_r1kt4xWa9UrfC9ZYD9EgdfFSwTJDM92T4Sjnxgoqoua__Qkx16ZKB8AlyaiQ9ORAOdKtMi9WlXfmUQGsJH3IqJb7gy0iOx4yUMSIiigjGrUvzcE1acHxA5tkvOpBY_2ZEC3-JIHQFiSgNP30UprHp3CFi3R17vVGoOSsPr5CjXMrQIvbByCQb1F-bQHYAm444-4YiIH9tV4schm6EeRyVq_gsCYrLmNMwKVdtIYmPMSvrseqxfbQBtw75PEISUr9BETVdbvVzHX8yOIog6It972fod3Y4msg-0gwtOdk9oy_MoJo0I2Np3kM6ZNidyUug8pYBCnRulRgnaoC03HebJb7sfsXYMcd8lJbLJsIchjdnnQ08w_tn9KF9fGZaPWjQcNTwJ-4GmPMDWXBnx_eL-2FdQ6qOcjwg=w2452-h1488-no">
 
@@ -77,7 +77,7 @@ With the libraries added, you should be able to run the sketch:
 Let me just briefly go over what some of the more important functions in `BodyArchitectures.pde` are doing:
 
 1.  _loadGHdata()_ 
-  * Loads the text file points from the `/geom` folder
+  * Loads the text file points from the `\data\geom` folder
   * Converts the points from `string` to `Vec3D`
   * Stores the 3D points to build our 3D geometry
 2. _createEnvelopeCrvs()_
@@ -104,7 +104,7 @@ Now that we have our Rhino file linked to our Processing sketch via Grasshopper,
 1. In Rhino, grab one set of inner/outer curves and move them in the +X direction.
 2. In Processing, press 'B' to rebuild the mesh.
 
-You should see that your bracelet is far wider than previously. _If not, make sure that your .txt files in grasshopper are pointing to the_ `/geom/` _folder and are streaming properly_:
+You should see that your bracelet is far wider than previously. _If not, make sure that your .txt files in grasshopper are pointing to the_ `\data\geom` _folder and are streaming properly_:
 
 <img src="https://lh3.googleusercontent.com/AqgRSMc9Vwr60Afv9NNf64PdKBNWtIIg7khsw0QRRTHi0L1BajLK3EGcr826v4XpM8EZwOc8vN6i7z6SK5MNWcQv7V97kNz1GeIT6ooSOFNlO9VepicDrBYqdKHAmAC9SaD3PFd8BBmqUbfVWJvo_7_KJi8JqoAcvqAQH1sqM3MVO6m6pY8lz_fhAPFRtEanvqZZRbuAp--gcex5gxc_29yIZgSqf3kY3htgxdxsN4tdIFUlklq_JdflKAdI319cX7kZpjaGbdZmt8dnUWH0f9J-RINDav5CuTh_ckXOZl2NSh-W-UuGZSjx2qIHzDu2BUfYs6UZRTSTUtvtucvwsKOzXVaMkkzSChxmlrj6JNnn18RoDdsbp_w_8gPbExJtfnP0DEiKlPm0nHw4PS60FmB00Nq4bTjPNaqaEybDXhr18TUQbwbjjV0Ua8EkS3s7gKN62Vssr8VocYj9C9O6JkMhrQSlVVnZ2PBPHHjSdZdPnwB8_juOXFNATVXf9z2ouVzzoZwQuys-cLBpWgztkDQ6xSx4LeepAqWjPOd_80DUuSd1pZhro-ttae3Wehm8Y8Ac=w2452-h1510-no">
 <img src="https://lh3.googleusercontent.com/1kkoAPjcigqI705cSNXB1yafOAWinrcqbbM1EhHKSR0JALTnQ6nJM9vENHjI-Y1GAc6U3g5zGG9dEomG0GCNQ8sWX7dnFR3PDYqCcQVZO5EZGka67U-8XUOghNCcKwOBDK027wjoFj2sMoBlo5xvJdDrwX-pFFbHdUaukW6JGh2WIOPA1EVmu78UqfCzNYCurzFYYcSpf1HHF6fapCv-4Q11eZSHCXAnjpluPZ7EbzCHDQ7ilvXP2BOebQEbscqLVC_bzYfI6mySRaoQ_1mpZrJmHD72BjCZX3QXWkVq2gJnkbiMjXY-JrHgAkRaKcMiiUrhdGULWiW3JJMaLR6DIa2OycKUz6B9k95-2O1habq4T0MtPF0eMc6Hw6pC7716XvAMOqEN-bdGWHlJ8Y2b2Xt1DtAYEPmFGxh9_lpG1L6yauSO7gS0tuOM3xKHV4E__ELhDDk0lv7fjeuSy4wWjfOgK-oz4s2BywtLaTMEqqnCoNcOz6VHCR87FTguN06JEfCRErY5yj9QFIEM4LALa5k2xRT5AU6JJzwYGJ4gzzcrGvagasJUNWaqLds8ZHoR2Nrl=w2114-h1514-no" width=420>
@@ -159,11 +159,26 @@ The alignment method `sweep()` is currently uses 2D profiles to loft 3D geometry
 
 <img src="https://lh3.googleusercontent.com/S5TS_1RTyjX6tXE2HXrJheajtK76orhXnovoOLkczQf3TMwmwV-uFvyNuAqAZ9DGdLZ2Z-EiLwIWTQ_7nx1Cl5uL6oPyWPIVQvY2lvF3mgBPFPGJNoscXIsq2NQ5Nh_lvKbvjlvNlp821h64soBdg0t2095Jrc-4aaSccFmpkTVlZbqoQmz8Y-OQ3N3AwKvlp1IcX43TowJLHFFJWlEjlkjhAG0PrRrX9EAO8wAd_3rMXs9AGDuWrUdU8PUujXu4KKVyo_UuLVssNNcMmjJ6ttDHFr6jWp3uysq3GTqF6YTag4UIWSbL-YK3_XzUA3CDdIKTSEd6jvATQAWrxLu-bhnapuiPka6hDHVtO9OffCrTXRWNO3f-f2HViISdjriQosXFqifvq9mQJlw6XWlYOEWytXnI7HthbzV6BXikdfbjQ8DdcK7PfY26jgr2yaoMYyxJFH9OwfZlBztYwjRZ-ECPwyecF__90d0g_1NuSiO1YDGgbRpkmL3hovUmbZcGlfnmaCVmEgcmadY4jqvQrgxRmOzbgwLD71qUsoQ_YWSjYCaD8cRfFiCtbCBhS8BPH8Ko=s720-no">
 
-To use meshes instead of profile curves, you'll need to modify how geometry from Rhino/Grasshopper is imported.
+To use meshes instead of profile curves, you'll need to modify how geometry from Rhino/Grasshopper is imported:
 
-1. 3D Model and save 5 mesh modules in the `\geom` folder.
+1. 3D Model and save 5 mesh modules in the `\data\geom` folder.
 2. You can import the meshes using an `STLReader` in [toxiclibs](http://toxiclibs.org/docs/core/toxi/geom/mesh/STLReader.html). Save them to a list of type `TriangleMesh`
 3. In `alignProfiles()`, copy and apply the reorientation matrix directly to the original mesh module
 4. Be sure to add all the new meshes to the `models` list.
 
 ##Saving & Printing 3D Models
+When you've got a bracelt design that you like, you and press 'S' to save out the model. When saved, the 3D model (.stl) and screenshot (.png) are saved to the `\data\prints` folder.
+
+1. You can change the name of your files saving out in the `saveModels()` function.
+
+######3D Printing
+Although the bracelet geometry is challenging for desktop FDM printers (there are lots of overhangs that require support structures), I've had fairly good success printing variations on Ultimakers and Makerbots. However you'll need to do a little bit of _post-processing_ to increase your chances of a successful print:
+
+1. Download [Meshmixer](http://www.meshmixer.com/download.html)
+2. Import your saved out .stl and [add supports](http://www.instructables.com/id/Meshmixer-Generate-Supports/)
+3. Save the .stl with supports as a brand new file
+4. Use this new file for whatever slicer you're using (e.g., Makerbot Desktop or Cura)
+5. Make sure you print with a raft, there's no need to generate additional supports
+ 
+The Meshmixer supports are quite minimal, reducing the printing time (as well as the support removal time!):
+<img src="http://www.meshmixer.com/images/mainpage_download.png">
