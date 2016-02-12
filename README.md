@@ -4,8 +4,8 @@ _**Body Architectures Workshop**_
 
 ######In this workshop, we will be making some 3D printed bracelets using [Processing](https://www.processing.org) (*...with just a little help from [Rhino](http://www.rhino3d.com/download/) & [Grasshopper](http://www.grasshopper3d.com/page/download-1)*). This workshop is designed for people who are comfortable with more traditional 3D modeling software, but want to learn how they can start using `code` to bring their designs alive.
 
-<img src="https://lh3.googleusercontent.com/gXdfmA_aY0PyoadeRcK7elyKxYLnEFIGtYhbS2Y7k07LnlnY82fAti-Fav4hUI8rmkAuUd7WCZWyxIWQ0PXV1gpTLy66F5yfzswYWTyHeYQmDpza9HaG6z1yr_wVVkgcRcNb1I0yyiYaAPlChLCRIFw4Oge4Whu3oPiLgHzm78wej1bHtwB4dGWmCVeml1hb1u8LLTYaPvd-DqCwFniiC5b1-TwQKguBcABwCbPsnm1OgGbPYMIc4Im8eU27QXb8_uq928gcPKcsctnJosFnx54171ze_XdBGKyyw7c2QnoPl0vsOD_CfNf-KGlYRVP4ZETRzuXKLjAOzzi7C9tLOiw_EgIG8q6KWLiBABz-wm3e0FPNZl81rSEhbxKynQ9MkyG7Mj-kh4ko3viwUzEeSWpJSivb63aS3va3GVwEJxa7k7fw0eZh34LNF1_MMLbo_nPFHlaAfP5tse2BX_AxcAhnIp2jpLxuoBkF0Eo-jrMMF1PpCO0EM3clynAAZp5itrqNVOqm3gkE0knxKVhFQ27ZKN-Zt0NinfjEFgiIxwo0KC5uVc7kRzYvpQ6I4xvQS73R=s640-no" width="400">
-<img src="https://lh3.googleusercontent.com/S5TS_1RTyjX6tXE2HXrJheajtK76orhXnovoOLkczQf3TMwmwV-uFvyNuAqAZ9DGdLZ2Z-EiLwIWTQ_7nx1Cl5uL6oPyWPIVQvY2lvF3mgBPFPGJNoscXIsq2NQ5Nh_lvKbvjlvNlp821h64soBdg0t2095Jrc-4aaSccFmpkTVlZbqoQmz8Y-OQ3N3AwKvlp1IcX43TowJLHFFJWlEjlkjhAG0PrRrX9EAO8wAd_3rMXs9AGDuWrUdU8PUujXu4KKVyo_UuLVssNNcMmjJ6ttDHFr6jWp3uysq3GTqF6YTag4UIWSbL-YK3_XzUA3CDdIKTSEd6jvATQAWrxLu-bhnapuiPka6hDHVtO9OffCrTXRWNO3f-f2HViISdjriQosXFqifvq9mQJlw6XWlYOEWytXnI7HthbzV6BXikdfbjQ8DdcK7PfY26jgr2yaoMYyxJFH9OwfZlBztYwjRZ-ECPwyecF__90d0g_1NuSiO1YDGgbRpkmL3hovUmbZcGlfnmaCVmEgcmadY4jqvQrgxRmOzbgwLD71qUsoQ_YWSjYCaD8cRfFiCtbCBhS8BPH8Ko=s720-no" width="400">
+<img src="https://c2.staticflickr.com/2/1701/24310056453_1248d0aa3c_o.gif" width="400">
+<img src="https://c2.staticflickr.com/2/1541/24910605256_5cb5d3d3a7_o.gif" width="400">
 
 Some experience with Processing and 3D modeling is presumed. The code here will be fairly advanced for beginners, but the included example files give you places to mess around with a design to create unique, printable bracelets.
 
