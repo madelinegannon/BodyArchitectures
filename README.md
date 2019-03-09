@@ -1,15 +1,15 @@
-##Crafting 3D Printed Wearables using Processing
+## Crafting 3D Printed Wearables using Processing
 _**Body Architectures Workshop**_
 
 
-######In this workshop, we will be making some 3D printed bracelets using [Processing](https://www.processing.org) (*...with just a little help from [Rhino](http://www.rhino3d.com/download/) & [Grasshopper](http://www.grasshopper3d.com/page/download-1)*). This workshop is designed for people who are comfortable with more traditional 3D modeling software, but want to learn how they can start using `code` to bring their designs alive.
+###### In this workshop, we will be making some 3D printed bracelets using [Processing](https://www.processing.org) (*...with just a little help from [Rhino](http://www.rhino3d.com/download/) & [Grasshopper](http://www.grasshopper3d.com/page/download-1)*). This workshop is designed for people who are comfortable with more traditional 3D modeling software, but want to learn how they can start using `code` to bring their designs alive.
 
 <img src="https://c2.staticflickr.com/2/1701/24310056453_1248d0aa3c_o.gif" width="400">
 <img src="https://c2.staticflickr.com/2/1541/24910605256_5cb5d3d3a7_o.gif" width="400">
 
 Some experience with Processing and 3D modeling is presumed. The code here will be fairly advanced for beginners, but the included example files give you places to mess around with a design to create unique, printable bracelets.
 
-####What You'll Learn
+#### What You'll Learn
 Included in the workshop files are code examples for:
   * Connecting geometry from Rhino/Grasshopper to Processing
   * Setting up a 3D modeling environment in Processing
@@ -18,7 +18,7 @@ Included in the workshop files are code examples for:
   * Exporting .stl's and png's
   
 
-##Getting Started
+## Getting Started
 To get started, lets make sure we are all working with the same software versions. _Just as a note,_ if you are more comfortable with programming than 3D modelling, feel free to skip the Rhino/Grasshopper steps; you can just modify the imported geometry using code.
 
 1. Download [Processing 3.0](https://www.processing.org/download)
@@ -29,8 +29,8 @@ To get started, lets make sure we are all working with the same software version
   * Mac & PC Users: Rhino 5.0 for PC has a free 90 day trial, and Grasshopper is a free plug-in
 3. Grab the files from this repo.
 
-##Configuring Files
-####Rhino
+## Configuring Files
+#### Rhino
 
 Open up `BodyArchitectures.3dm`. You should see a 3D scan of an arm with some 3D curves modelled around it. 
 
@@ -61,7 +61,7 @@ But before you can use this pipeline, we need configure `BodyArchitectures.gh` f
 
 * Hit `enter` to override the existing file.
 
-####Processing
+#### Processing
 Open `BodyArchitectures.pde` in Processing 3.0. Before we run our code, you'll need to add the _PeasyCam_ and _Toxiclibs_ libraries to your `Contributed Libraries` folder. 
 
   * _PeasyCam_ can be installed using Processing 3.0's built-in `Add Library` feature.
@@ -73,7 +73,7 @@ With the libraries added, you should be able to run the sketch:
 <img src="https://c2.staticflickr.com/2/1551/24936783035_c3e8e3f07b_z.jpg">
 
 
-##Code Structure
+## Code Structure
 Let me just briefly go over what some of the more important functions in `BodyArchitectures.pde` are doing:
 
 1.  _loadGHdata()_ 
@@ -95,10 +95,10 @@ There are also some `keyPressed` controls for you to use:
 3. 'M' = show mesh
 4. 'W' = show wireframe
 
-##Modifying the Bracelet Design
+## Modifying the Bracelet Design
 There are a few different ways you can modify these example files to make them your own.
 
-####For Beginners
+#### For Beginners
 Now that we have our Rhino file linked to our Processing sketch via Grasshopper, any manual changes we make to geometry in Rhino will also show up in Processing. Try this:
 
 1. In Rhino, grab one set of inner/outer curves and move them in the +X direction.
@@ -128,10 +128,10 @@ With this method, you're getting an entirely new bracelet design with just a few
 
 <img src="https://c2.staticflickr.com/2/1710/24936782915_1300f43306_z.jpg">
 
-####For Advanced Users
+#### For Advanced Users
 For those who have some programming experience, here are some places to modify the code so you can customize your bracelet design even more.
 
-#####Dynamically Scale the 2D Profiles
+##### Dynamically Scale the 2D Profiles
 In the existing code, we are scaling the 2D profile curves based on the distance between the `inner` and `outer` curves at a given point. 
 But this is fairly static. You could modify the scale factor by *any* sort of input; not just distance.
 
@@ -143,7 +143,7 @@ Scaling happens in `alignProfiles()`. Here are some other ideas for tweaking the
 2. Use a mathematical function, like `sine` or `cosine`, to add a cyclical undulation the scalar.
 3. Integrate live data, like from sound, webcams, or even [twitter](http://twitter4j.org/en/), to visualize a data set as 3D form.
 
-#####Integrate Faster Feedback
+##### Integrate Faster Feedback
 Currently our example reads and writes to text files to connect Processing to Rhino via Grasshopper. Although this is effective, it means we need to manually reload our data every time we update Rhino. But there is a much faster communication technique ... [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control)!
 
 Fortunately, both Processing and Grasshopper have ways to integrate OSC:
@@ -155,7 +155,7 @@ Fortunately, both Processing and Grasshopper have ways to integrate OSC:
 
 With this you'll see that any changes made in Rhino immediately update your Processing sketch.
 
-#####Use Meshes Instead of 2D Profiles
+##### Use Meshes Instead of 2D Profiles
 The alignment method `sweep()` is currently uses 2D profiles to loft 3D geometry, but it also works used fully 3D meshes! For example, this bracelet design reorients 5 closed-solid meshes on the rail curves (instead of 5 2D profile curves). A rail is added on the edges to make sure everything connects:
 
 <img src="https://lh3.googleusercontent.com/S5TS_1RTyjX6tXE2HXrJheajtK76orhXnovoOLkczQf3TMwmwV-uFvyNuAqAZ9DGdLZ2Z-EiLwIWTQ_7nx1Cl5uL6oPyWPIVQvY2lvF3mgBPFPGJNoscXIsq2NQ5Nh_lvKbvjlvNlp821h64soBdg0t2095Jrc-4aaSccFmpkTVlZbqoQmz8Y-OQ3N3AwKvlp1IcX43TowJLHFFJWlEjlkjhAG0PrRrX9EAO8wAd_3rMXs9AGDuWrUdU8PUujXu4KKVyo_UuLVssNNcMmjJ6ttDHFr6jWp3uysq3GTqF6YTag4UIWSbL-YK3_XzUA3CDdIKTSEd6jvATQAWrxLu-bhnapuiPka6hDHVtO9OffCrTXRWNO3f-f2HViISdjriQosXFqifvq9mQJlw6XWlYOEWytXnI7HthbzV6BXikdfbjQ8DdcK7PfY26jgr2yaoMYyxJFH9OwfZlBztYwjRZ-ECPwyecF__90d0g_1NuSiO1YDGgbRpkmL3hovUmbZcGlfnmaCVmEgcmadY4jqvQrgxRmOzbgwLD71qUsoQ_YWSjYCaD8cRfFiCtbCBhS8BPH8Ko=s720-no">
@@ -167,12 +167,12 @@ To use meshes instead of profile curves, you'll need to modify how geometry from
 3. In `alignProfiles()`, copy and apply the reorientation matrix directly to the original mesh module
 4. Be sure to add all the new meshes to the `models` list.
 
-##Saving & Printing 3D Models
+## Saving & Printing 3D Models
 When you've got a bracelt design that you like, you and press 'S' to save out the model. When saved, the 3D model (.stl) and screenshot (.png) are saved to the `\data\prints` folder.
 
 1. You can change the name of your files saving out in the `saveModels()` function.
 
-#####3D Printing
+##### 3D Printing
 Although the bracelet geometry is challenging for desktop FDM printers (there are lots of overhangs that require support structures), I've had fairly good success printing variations on Ultimakers and Makerbots. However you'll need to do a little bit of _post-processing_ to increase your chances of a successful print:
 
 1. Download [Meshmixer](http://www.meshmixer.com/download.html)
@@ -183,9 +183,7 @@ Although the bracelet geometry is challenging for desktop FDM printers (there ar
  
 The Meshmixer supports use a branching structure that are quite minimal. This significantly reduces printing and clean up time!
 
-##  
-
-##Summary
+## Summary
 I hope this has given you a good starting point for exploring 3D modeling and printing in Processing. 
 By starting with geometry from Rhino/Grasshopper, we can precisely model components that need high precision (_like the sizing or the opening of a bracelet_). It also allows people without much programming experience can get a taste of how linking geometry to Processing can open many more streams of input for crafting 3D form.
 
